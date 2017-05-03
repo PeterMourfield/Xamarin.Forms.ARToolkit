@@ -6,8 +6,8 @@
 
 Here is what the [test project](https://github.com/pmourfield/Xamarin.Forms.ARToolkit/tree/master/test) looks like:
 
-![Xamarin.Forms.ARToolkit Screen Shot 1](docs/Xamarin.Forms.ARToolkit1.png)
-![Xamarin.Forms.ARToolkit Screen Shot 2](docs/Xamarin.Forms.ARToolkit2.png)
+![Xamarin.Forms.ARToolkit Screen Shot 1](Xamarin.Forms.ARToolkit1.png)
+![Xamarin.Forms.ARToolkit Screen Shot 2](Xamarin.Forms.ARToolkit2.png)
 
 [GitHub Site](https://github.com/pmourfield/Xamarin.Forms.ARToolkit)
 
