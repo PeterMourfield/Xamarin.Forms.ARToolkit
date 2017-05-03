@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1A48A23-0F27-4513-BAD8-BC15DA10F8B5}</ProjectGuid>
+    <Description>Augmented Reality Toolkit for Xamarin Forms</Description>
+    <PackageId>Xamarin.Forms.ARToolkit</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>petermourfield</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Xamarin.Forms.ARToolkit</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>Xamarin.Forms.ARToolkit.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Forms.ARToolkit.Android\Xamarin.Forms.ARToolkit.Android.csproj">
+      <Project>{752F88D4-7D59-4F77-A5AA-6C418F0105E1}</Project>
+      <Name>Xamarin.Forms.ARToolkit.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Forms.ARToolkit.iOS\Xamarin.Forms.ARToolkit.iOS.csproj">
+      <Project>{67CE9A4F-2F24-4985-8F18-8CADE5CBD085}</Project>
+      <Name>Xamarin.Forms.ARToolkit.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.1.248</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
